@@ -1,0 +1,489 @@
+/* Imported the font Nunito from google as a chosen style for teh webpage - https://fonts.google.com/specimen/Nunito*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+/* The '*'class is used as the main settings used throughout the css file, unless it is defined (overwritten) in the different classes*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nunito font used, san-serif was also added as advised by google to make it work  */
+/* The website uses mainly white black orange green(rgb(196 254 196)), darkgrey, and darkblue as a desiugn choice*/
+/* Tried to keep it simple so not to distract fromn the task */
+/* A lot of the different formats used in the classes was learnt from reading bootstrap / CSS books, websites, and videos
+as well as a lot of playing and changing of the settings to make it work. It took longer than anticiplated!!*/
+
+body {
+font-family: 'Nunito', sans-serif;
+color: black;
+background-color: white;
+overflow-x: hidden;
+}
+
+/* This takes off any default text-decorations from links hover and focus as I wanted to set this myself in the classes */
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+/* This takes off any default button outlines. I will define these myself*/
+.btn, .btn:focus {
+    outline: none;
+}
+
+/* This is the positioning properties for the hero section. This helps it work as a responsive design*/
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Hero header colour */
+.hero .header {
+    background-color: white;
+    box-shadow: 0 5px 10px darkgray;
+}
+
+/* header logo padding */
+.header-logo {
+    padding: 20px 0;
+}
+
+/* header logo positioning, font properties, and colour */
+.header-logo a{
+    display: inline-block;
+    color: black;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* header logo span section font properties and colour */
+.header-logo a span{
+    color: orange;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/* header menu padding and text alignment */
+.header-menu {
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* header menu list position and margins */
+.header-menu ul li {
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+/* header menu last element (last child) in the list requires 0 margin */
+.header-menu ul li:last-child{
+    margin-right: 0 
+}
+
+/* header menu list links properties*/
+.header-menu ul li a{
+    font-size: 17px;
+    color: #222;
+    font-weight: 500;
+    display: block;
+    padding: 2px 0;
+    position: relative
+}
+
+/* header menu list - after every link adds a properties to underline the menu item */
+.header-menu ul li a:after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: orange;
+    content: '';
+    transition: all 0.25s;
+    transform: scale(0);
+    
+}
+
+/* If the mouse hovers over the menu item it will underline the list item (even if it is active or not)*/ 
+.header-menu ul li.active a:after{
+    transform: scale(1);
+}
+.header-menu ul li:hover a:after{
+    transform: scale(1);
+}
+
+/* header right (the login register basket button section) text align and colour padding */
+.header-right{
+    text-align: right;
+    padding: 30px 0;
+}
+
+/* header right buttons set as inline */
+.header-right .header-right-btn{ 
+    display: inline-block;
+}
+
+/* header right buttons initial link button properties */
+.header-right .header-right-btn a{
+    font-size: 17px;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    margin-right: 13px;
+    transition: 0.25s;
+} 
+/* header right buttons after each button will add a '/' to seperate the buttons*/
+.header-right .header-right-btn a:after{
+    position: absolute;
+    right: -12px;
+    color: orange;
+    top: 2px;
+    font-size: 16px;
+    content: '/';
+}
+
+/* header right buttons after the last element it will not have any content (/)*/
+.header-right .header-right-btn a:last-child:after{
+    display: none;
+}
+
+/* removes the margin from the last element (child ) in the header buttons*/
+.header-right .header-right-btn a:last-child{
+margin-right: 0;
+}
+
+/* If the mouse hovers over any of the header buttons it will turn it 'dark gray'*/
+.header-right .header-right-btn a:hover{
+    color: darkgray;
+}
+
+/*This positions the main image for the website. 
+The slider is like the screen, or the viewport that will display all the sections and go between the sections  */
+.hero-slider{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    position: relative;
+}
+
+/* This is the box that shows the main image that greets you in the website.
+The properties are set so it takes up the whole screen when you first enter the site.
+You have to scroll down (slide) to get to the shop.*/
+.slider-bg-box{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* This class fits the image to the big box properties*/
+.slider-bg-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top right;
+}
+
+/* Setting the default padding around the main layout for the shop section*/
+.padding-layout{
+    padding: 100px 0;
+}
+
+/* This sets the properties for the title sections of the website. 
+There is only a shop, so therefore is only applied to the shop title*/
+.heading-container h2{
+    position: relative;
+    color: black;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* This sets the properties for after the title sections for the website (the shop)*/
+.heading-container h2:after{
+    content: '';
+    display: block;
+    width: 70px;
+    height: 5px;
+    background-color: orange;
+    margin: 10px auto 10px;
+}
+
+/* This sets the margin between the title for the shop section*/
+.product-section .heading-container{
+    margin-bottom:20px;
+}
+
+/* This class is setting the properties for the product 'boxes' in the shop*/
+.product-section .box{
+    position: relative;
+    margin-top: 25px;
+    padding: 35px 35px;
+    background-color: white;
+    overflow: hidden;
+    transition: all 0.25s;
+}
+
+/* This class is setting the properties for the images boxes in the shop All image boxes have a height of 250px*/
+.product-section .box .img-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+/* This class is setting the properties for the images in the shop. All image aree set in the boxes and have an equal height of 250px*/
+.product-section .box .img-box img{
+    max-height: 100%;
+    max-width: 250px;
+    transition: all 0.25s;
+}
+
+/* This sets the positioning and text colour for the product details under the images in the shop*/
+.product-section .box .detail-box{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    color: darkblue;
+}
+
+/* h5 is used as the header font for the info and buy now button in the shop. The font size and margins are set here*/
+.product-section .box .detail-box h5{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* h6 is used as the header font for the product name and price (below the image) in the shop. The font size and margins are set here*/
+.product-section .box .detail-box h6{
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+/* This makes the image grow by 10% if the mouse hovers over the image. It makes it look like it is popping out towards the customer*/
+.product-section .box:hover img{
+    transform: scale(1.1);
+}
+
+/* This box set properties goes over the image when it is hovered over. It has opacity (set in the background-color)
+so you can see through it. It shows that this is the focus of the customer and mouse. It transitions in as a translate
+The buy now and product name will come in with it. It is currently set to hidden until it is hovered over.  */
+.product-section .box .option-container {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 166, 0, 0.1) ;
+    z-index: 3;
+    opacity: 1;
+    visibility: hidden;
+    transform:translate(100%);
+    transition: all 0.25s;
+}
+
+/* This makes the box visible and translates across the image (it still has opacity so that it can be seen through to show the product image */
+.product-section .box:hover .option-container {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* This sets the position for the buy now and product detail buttons */
+.product-section .options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+/* This sets the properties for the text for the buy now and product detail buttons */
+.product-section .options a{
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 30px;
+    width: 165px;
+    text-align: center;
+    margin: 5px 0;
+    transition: all 0.25s;
+}
+
+/* This sets the colour for the options buttons. I was going to have them do different things, but changed it so they did the same.
+That is why option1 and option 2 settings are set in the same class */
+.product-section .options a.option1, .product-section .options a.option2{
+    background-color: orange;
+    border: 1px solid orange;
+    color: white;
+}
+
+/* changes white with black font when hovered over*/
+.product-section .options a.option1:hover, .product-section .options a.option2:hover{
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+}
+
+/* Used span again for the h2 in the footer, so needed this orange property for the menu at the bottom that uses h2*/
+.heading-container h2 span{
+    color: orange;
+}
+
+/*This is the same colour as the insect bun in the slider big box image. Chosen as a design choice. Makes the website flow. And is cool!*/
+.footer{
+    background: linear-gradient(rgba(30, 30, 30, 0.1) 20%, rgba(255, 166, 0, 0.6) 50%, rgba(30, 30, 30, 0.1)) 80%;
+}
+
+/* Margin around the footer logo*/
+.footer .footer-logo{
+    margin-bottom: 20px;
+}
+
+/* Font properties for the footer logo (black if not in the span)*/
+.footer .footer-logo a{
+    display: inline-block;
+    color: black;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Used span  for the logo again in the footer, so needed this orange property and different font to match the logo in the header*/
+.footer .footer-logo a span{
+    color: orange;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/*Font properties for information paragraphs in the footer*/
+.footer .information p{
+    margin-bottom: 1.2rem;
+    line-height: 25px;
+    font-size: 15px;
+    max-width: 300px;
+    color: black;
+}
+
+/*Font properties for h3 used in the footer menu*/
+.footer .footer-menu h3{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: black;
+}
+
+/* Properties for lists in the footer menu*/
+.footer .footer-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Properties for list elements in the footer menu*/
+.footer .footer-menu ul li{
+    float: left;
+    width: 100%;
+}
+
+/* Font properties for links in the list elements in the footer menu*/
+.footer .footer-menu ul li a{
+    font-size: 15px;
+    color: black;
+    margin-bottom: 0;
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* 'Flex' is auto adjusting the field rows and columns to the parents around it - auto adjust the field display*/
+.field{
+    display: flex;
+}
+
+
+/* All properties for the form hover or focus are the same, and set below */
+.form_sub .field input[type="email"],
+.form_sub .field input[type="email"]:hover,
+.form_sub .field input[type="email"]:focus{
+    padding: 10px 110px 10px 15px;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+    height: 48px;
+}
+
+/*The form is set relative to the parent elements */
+.form_sub{
+    position: relative;
+}
+
+/*This sets the form input as email and is looking for an '@' sign to ensure the user is typing the correct content
+Also it has a submit button to send the inputted information
+This section sets the position and font properties for the form*/
+.form_sub input[type="email"] + input[type="submit"]{
+    position: absolute;
+    right: 0;
+    background-color: orange;
+    color: white;
+    top: 0;
+    border: none;
+    font-size: 14px;
+    height: 48px;
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+/*The submit button changes white with an orange border if hovered over. This is a reverse of the original button  */
+.form_sub input[type="email"] + input[type="submit"]:hover{
+    position: absolute;
+    right: 0;
+    background-color: white;
+    color: orange;
+    top: 0;
+    border: orange solid 2px;
+    font-size: 14px;
+    height: 48px;
+    font-weight: 600;
+    padding: 0 15px;
+    transition: all 0.25s;
+}
+
+.img-product-box {
+    display: grid;
+    height: 100%;
+}
+
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+/* Responsive Bootstrap CSS section - This is sourced from https://getbootstrap.com/docs/3.4/css/
+This has been taken from getbootstrap and altered to give this website a responsive design.
+Some issues with the header so had to align them to the center when the display was small.*/
+@media (max-width: 992px){
+    .hero {
+        min-height: 400px;
+    }
+    .hero .header-logo,
+    .hero .header-menu,
+    .hero .header-right{
+        text-align: center;
+        padding: 10px 0;
+    }
+    .hero-slider .detail-box h1{
+        font-size: 3.5rem;
+    }
+}

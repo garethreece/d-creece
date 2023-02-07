@@ -1,0 +1,436 @@
+<!-- Main bootstrap files taken from https://getbootstrap.com/docs/4.3/getting-started/introduction/ v4.3-->
+
+<!-- DOCTYPE to inform the browser which version of html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<!-- Code for icon in tab generated at https://realfavicongenerator.net/ -->
+<!--icon tab code taken from https://codelikeadev.com/blog/favicon-in-html-website-->
+<!-- This means that the tab has an icon and a title - which is cool! -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> d-creece! simple NFT consultancy </title>
+<!-- logo image sourced from https://www.flaticon.com/free-icon/minimize_786263 (free resource).-->
+<link rel="icon" href="img/icon/favicon.ico" alt="minimise icon a black horizontal line in a black square">
+
+
+
+    <!-- Required meta tags from https://getbootstrap.com/docs/4.3/getting-started/introduction/ v4.3 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- link to bootstrap for the css files and webpage structure 
+        https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+        <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">
+
+    <link href = "CSS/style.css" rel = "stylesheet" type = "text/css">
+
+</head>
+
+<body>
+
+    <!-- Start of the 'hero' section-->
+    <!-- The 'hero' section is the oversized banner and menu header. This is what you first see in the website before scrolling down -->
+    <div class="hero">
+        <!-- This is the header section and is used to identify the styles in the CSS document -->
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <!-- Setting the size of the company logo header section based on the bootstrap grid system-->
+                    <div class="col-lg-3 col-md-12">
+                        <!-- This is the identifying the header logo section for the CSS format-->
+                        <!-- This is the same for all div class = "" sections and is used to refer to the styles setup in the CSS file.
+                        I won't need to keep commenting this throughout the document at the div class, 
+                        as it is assumed that this process is understood-->
+                        <div class="header-logo">
+                            <!-- logo image sourced from https://www.flaticon.com/free-icon/minimize_786263 (free resource)
+                            This logo is used throughout the website, so will only reference here and assume that it is recognised
+                            for the other times I use the logo image.-->
+                            <a href="#shop"><span><img src="img/icon/decreece minimise logo.png" width="18px" height = "18px" alt="minimise icon a black horizontal line in a black square"> d-c</span>reece</a>
+                        </div>
+                    </div>
+                    <!-- This is the menu at the top of the page in an unorganised list and links (if required)-->
+                    <!-- Setting the size of the header menu section based on the bootstrap grid system-->
+                    <div class="col-lg-5 col-md-12">
+                        <nav class="header-menu">
+                            <ul>
+                                <!-- This shows the active menu item is Home. It will always be underlined if you are in this page-->
+                                <li class="active"><a href="#">Home</a></li>
+                                <!-- The otheres will be underlined if the mouse hovers over the menu item (see the CSS file)-->
+                                <li><a href="#shop">NFT</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Setting the size of the login header right section based on the bootstrap grid system-->
+                    <div class="col-lg-3 col-md-12">
+                        <!-- This is the login / register / baasket section of the header on the right hand side -->
+                        <div class="header-right">
+                            <div class="header-right-btn">
+                                <a href="#">Login</a>
+                                <a href="#">Register</a>
+                                <a href="#">Basket</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- start of slider section-->
+        <!-- I could have turned this into a selection of images that slide in on the hero image.
+        However, this wasn't required in the task so left it as one image so is a short section -->
+        <section class="hero-slider">
+            <div class="slider-bg-box">
+                <!-- The colour of the image is used as the colour of the footer as a design preference-->
+                <img src = "img/minimilist.png" alt="minimilist widescreen image of a sunset over mountains with blue sky orange horizon, and grey ground">
+            <!--image source: https://wallpapercave.com/minimalist-3440x1440-wallpapers (need to create mny own before publishing)--> 
+            </div>
+            
+        </section>
+        <!-- end of slider section-->
+    </div>
+    <!-- End of the 'hero' section-->
+
+
+    <!-- Start of the 'product' section-->
+    <!-- This is the main shop in the website and task. Once one product is set-up. 
+        It was then copied and pasted 10 times to fufil the 10 items for the task.
+    The images and alt text etc. was then changed to suit the ten different products-->
+    <!-- Therefore, I only need to comment on the first product as the rest are copied across and work in exactly the same way-->
+    <section class="product-section padding-layout">
+        <div class="container">
+            <div class="heading-container text-center">
+                <!-- Main heading for the shop section -->
+                <h2 id = "shop"><span>NFT </span>Products</h2>
+            </div>
+                <div class="row">
+                    <!-- First product in the shop setting the size of the bootstrap grid system-->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <!-- These are the buttons that appear on the images 
+                                    These appear when the mouse hovers or image is clicked on.-->
+                                <div class="options">
+                                    <!-- This would go to the Alice NFT page-->
+                                    <a href="#" class="option1">
+                                        Alice Pop
+                                    </a>
+                                    <!-- This would put the product straight in the basket-->
+                                    <a href="#" class="option2">
+                                        Buy Now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <!-- Alice Pop -->
+                                <img src = "img/Alice_psychedelic_pop_art.png" alt="Potrait Psychedelic image of alice with minimilist colour on face">
+                            </div>
+                            <!-- This gives the name of the product and price and is always visable under the picture-->
+                            <div class="detail-box">
+                                <h5>Alice Pop</h5>
+                                <h6>1.5 Eth</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second product in the shop... This is repeated for ten products below and will have the same comments.
+                    For comment information see the first product-->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                    <a href="#" class="option1">
+                                        Alice Psychedelic
+                                    </a>
+                                    <a href="#" class="option2">
+                                        Buy Now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <!-- mealworm image sourced https://www.forbes.com/sites/alexledsom/2020/04/04/edible-insects-most-likely-coming-to-european-supermarkets-soon/?sh=11e9fcac2f0e-->
+                                <img src = "img/Alice_psychedelic_v2.png" alt="Potrait Psychedelic image of alice with minimilist colour on face">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Alice Psychedelic</h5>
+                                <h6>1.5 Eth</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                    <a href="turtle.html" class="option1">
+                                        Steampunk Turtle
+                                    </a>
+                                    <a href="#" class="option2">
+                                        Buy Now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <!-- Steampunk Turtle -->
+                                <img src = "img/baby_turtle_steampunk.png" alt="Baby turtle dressed in smart steampunk outfit, cane and smoke background">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Steampunk Turtle</h5>
+                                <h6>1 Eth</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                    <a href="#" class="option1">
+                                        Barbarian
+                                    </a>
+                                    <a href="#" class="option2">
+                                        Buy Now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <!-- Barbarian -->
+                                <img src = "img/barbarian.png" alt="Angry Barbarian portrait with large brown beard and brown hair. Neutral dark background">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Barbarian</h5>
+                                <h6>1.5 Eth</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                    <a href="#" class="option1">
+                                        Hulk Spaghetti
+                                    </a>
+                                    <a href="#" class="option2">
+                                        Buy Now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <!-- Hulk Spaghetti-->
+                                <img src = "img/hulk_spaghetti.png" alt="Hulk made out of green spaghetti on a plate">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Hulk Spaghetti</h5>
+                                <h6>0.7 Eth</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                    <a href="#" class="option1">
+                                        Harriet
+                                    </a>
+                                    <a href="#" class="option2">
+                                        Buy Now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <!-- Minimilist woman potrait-->
+                                <img src = "img/minimilist_abstract.png" alt="Side portrait of woman minimisilist grey background blue red face">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Harriet</h5>
+                                <h6>1.5 Eth</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                    <a href="#" class="option1">
+                                        Katherine
+                                    </a>
+                                    <a href="#" class="option2">
+                                        Buy Now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <!-- Minimilist Katherine-->
+                                <img src = "img/minimilist_abstract_v2.png" alt="Side portrait of woman minimisilist  orange background yellow face">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Katherine</h5>
+                                <h6>1.5 Eth</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                    <a href="#" class="option1">
+                                        Mr Meatball Guy
+                                    </a>
+                                    <a href="#" class="option2">
+                                        Buy Now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <!-- Mr Meatball guy-->
+                                <img src = "img/mister_meatball_guy.png" alt="Mr Meatball guy dancing on roof flirting with cheese">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Mr Meatball Guy</h5>
+                                <h6>0.75 Eth</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                    <a href="#" class="option1">
+                                        Mr Spaghetti Guy
+                                    </a>
+                                    <a href="#" class="option2">
+                                        Buy Now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <!-- Agave Weevils image sourced https://woven-network.co.uk/blog/edible-insects-list/#:~:text=Yet%20another%20insect%20eaten%20almost,partly%20responsible%20for%20their%20popularity.-->
+                                <img src = "img/mister_spaghetti_guy.png" alt="Mr spaghetti guy dancing on roof flirting with cheese">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Mr Spaghetti Guy</h5>
+                                <h6>0.75 Eth</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="box">
+                            <div class="option-container">
+                                <div class="options">
+                                    <a href="#" class="option1">
+                                        Ghost Red Sunset
+                                    </a>
+                                    <a href="#" class="option2">
+                                        Buy Now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="img-box">
+                                <!--Ghost Red Sunset -->
+                                <img src = "img/GhostBigRed.png" alt="Minimislist big red ghost sunset with mountain outline">
+                            </div>
+                            <div class="detail-box">
+                                <h5>Ghost Red Sunset</h5>
+                                <h6>1 Eth</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- End of product section -->    
+
+    <!-- Start of Footer section-->
+    <!-- This footer section is used to give company info including a logo as required by the task, more menu options similar to the header.
+    But also, a contact details subscribe form as required by the task.-->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Setting the size of the company info section based on the bootstrap grid system-->
+                <div class="col-md-4">
+                    <!-- This is the identifying the footer logo section for the CSS format-->
+                    <div class="footer-logo">
+                        <!-- logo image sourced from https://www.flaticon.com/free-icon/minimize_786263-->
+                        <a href="#shop"><span><img src="img/icon/decreece minimise logo.png" width="18px" height = "18px" alt="minimise icon a black horizontal line in a black square"> d-c</span>reece</a>
+                    </div>
+                    <!-- This is the identifying the information section and for the CSS file-->
+                    <div class="information">
+                        <p><strong>Address:</strong> d-creece Ltd.<br>
+                        Kendal, Cumbria<br>
+                        UK, LA9 DEC</p>
+                        <p><strong>Telephone:</strong> +44 1539 543210</p>
+                        <p><strong>Email:</strong> info@d-creece.com</p>
+                    </div>
+                </div>
+                <!-- Setting the size of the footer-menu in the foooter section based on the bootstrap grid system-->
+                <div class="col-md-8">
+                    <div class="row">
+                    <div class="col-md-7">
+                        <div class="row">
+                            <!-- Setting the size of the 'Menu' list in the foooter section based on the bootstrap grid system-->
+                            <div class="col-md-6">
+                                <!-- This is the identifying the footer-menu section and for the CSS file-->
+                                <div class="footer-menu">
+                                    <h3>Menu</h3>
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#shop">NFT</a></li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Setting the size of the 'Account' list in the foooter section based on the bootstrap grid system-->
+                            <div class="col-md-6">
+                                <div class="footer-menu">
+                                    <h3>Account</h3>
+                                    <ul>
+                                        <li><a href="#">Login</a></li>
+                                        <li><a href="#">Register</a></li>
+                                        <li><a href="#">Personal</a></li>
+                                        <li><a href="#">Basket</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Setting the size of the 'Information' Subscribe in the foooter section based on the bootstrap grid system-->
+                    <div class="col-md-5">
+                        <div class="footer-menu">
+                            <h3>Subscribe</h3>
+                            <!-- Using the information format in the footer for the info explaining leaving an email contact detail-->
+                            <div class="information">
+                                <p>Leave your email address so we can get in contact with you</p>
+                                <!--Included a small company logo next to the contact details form -->
+                            </div>
+                            <!-- This id's and defines the format for the form section see the CSS file for the style-->
+                            <div class="form_sub">
+                                <form>
+                                    <!-- This creates the fields and information pre populated and required for the form-->
+                                    <fieldset>
+                                        <div class="field">
+                                            <input type="email" name="email" placeholder="Enter Your Email">
+                                            <input type = "submit" value ="Subscribe" name="">
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- End of Footer section -->
+</body>
+<!-- End of body section -->
+</html>
+<!-- End of html file -->
+
